@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600&family=Fraunces:wght@700&family=Inter:wght@400;700&family=Karla:wght@400;700&family=Montserrat:wght@200&display=swap');
+
+/* font-family: 'Bai Jamjuree', sans-serif; */
+
+/*********************** Reset ***********************/
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+ul {
+    list-style: none;
+    max-width: 400px;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+.special-heading {
+    text-align: center;
+    color: var(--Dark-Grayish-Blue);
+    padding-top: 50px;
+}
+.special-heading + p {
+    text-align: center;
+    color: var(--Grayish-Blue);
+    margin: auto;
+    padding: 15px 0;
+    max-width: 695px;
+}
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+/************************** End Reset ************************/
+
+/************* Start Header *************/
+header {
+    padding: 30px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-header-desktop.png);
+    background-size: cover;
+}
+.intro {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .intro h1 {
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 600;
+    padding-top: 25px ;
+}
+header .intro p {
+    color: var(--Grayish-Blue);
+    padding-top: 10px;
+    max-width: 655px;
+    margin: 0;
+    text-align: center;
+}
+.action-button {
+    padding: 35px 0;
+}
+.action-button button {
+    margin: 0 8px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.action-button .ios{
+    padding: 12px;
+    width: 185px;
+    border-radius: 55px;
+    background-color: var(--Strong-Cyan);
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 2px 1px var(--Strong-Cyan),0px 0px 2px 1px var(--Strong-Cyan);
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+}
+.action-button .ios:hover {
+    background-color: hsl(171, 68%, 25%);
+}
+.action-button .mac{
+    padding: 12px;
+    width: 185px;
+    border-radius: 55px;
+    background-color: var(--Light-Blue);
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 2px 1px var(--Light-Blue), 0px 0px 2px 1px var(--Light-Blue);
+    transition: background-color .3s ease;
+}
+.action-button .mac:hover {
+    background-color: hsl(233, 29%, 41%);
+}
+
+@media (max-width: 768px) {
+    header {
+        background-image: url(images/bg-header-mobile.png);
+        background-size: cover;
+        padding: 40px 10px;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    header .intro h1,
+    header .intro p {
+        text-align: center;
+        max-width: 100%;
+    }
+    .action-button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .action-button button {
+        margin: 10px;
+    }
+
+}
+
+/************* End Header *************/
+
+.two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 0;
+}
+.two img {
+    height: 100%;
+    width: 80%;
+}
+.two .features div {
+    margin-top: 40px ;
+    width: 65%;
+}
+.two .features div h3 {
+    color: var(--Dark-Grayish-Blue);
+}
+.two .features div p {
+    color: var(--Grayish-Blue);
+    line-height: 1.6;
+    padding-top: 5px;
+}
+@media (max-width: 768px) {
+    .two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .features {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
+
+/**************************************************/
+.three img {
+    max-width: 100%;
+    position: relative;
+    left: 313px;
+    top: 50px;
+}
+.three .head {
+    padding: 30px;
+}
+@media (max-width: 768px) {
+    .three {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .three img{
+        position: relative;
+        left: 5px;
+    }
+}
+.four .function {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0;
+}
+.four .function div {
+    text-align: center;
+}
+.four .function div h3 {
+    color: var(--Dark-Grayish-Blue);
+    padding: 20px;
+}
+.four .function div p {
+    color: var(--Grayish-Blue);
+    line-height: 1.6;
+}
+.four div.support-companys {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 85px;
+}
+
+.five .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+@media (max-width: 768px) {
+    .four .function {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .four .function div {
+        margin: 20px
+    }
+    .four div.support-companys {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .four div.support-companys img {
+        margin: 30px
+    }
+
+}
+/*************** start footer ***************/
+
+footer {
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    
+}
+footer .foot img {
+    width: 50px;
+    height: 50px;
+    margin: 50px 70px;
+}
+footer div.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div.social a {
+    padding-left: 15px;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+}
+footer div.social a img {
+    border-radius: 27%;
+}
+footer div.social a img:hover {
+    background-color: var(--Strong-Cyan);
+}
+.nav {
+    padding-top: 45px;
+}
+ul li a {
+    color: var(--Grayish-Blue);
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+ul li a:hover {
+    color: var(--Strong-Cyan);
+}
+ul li {
+    display: inline-block;
+    margin: 5px 20px;
+}
+@media (max-width: 768px) {
+    footer  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+}
+/* End Footer */
+
+/*************** Media **************/
+
